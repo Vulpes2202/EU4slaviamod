@@ -1,0 +1,252 @@
+country_decisions = {
+
+	slavic_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = SLA }
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = SLA }
+					num_of_cities = 6
+				}
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = polish
+				primary_culture = croatian
+				primary_culture = schlesian
+				primary_culture = serbian
+				primary_culture = slovene
+				primary_culture = bosnian
+				primary_culture = bulgarian
+				primary_culture = czech
+				primary_culture = polish
+				primary_culture = schlesian
+				primary_culture = sorbian
+				primary_culture = slovak
+				primary_culture = russian
+				primary_culture = novgorodian
+				primary_culture = ryazanian
+				primary_culture = byelorussian
+				primary_culture = ruthenian
+			}
+		}
+
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no			
+			owns_core_province = 262	# Krakow
+			owns_core_province = 295	# Moskva
+			owns_core_province = 280	# Kiev
+			owns_core_province = 266	# Prague
+			owns_core_province = 4239	# Belgrade
+		}
+
+		effect = {
+			change_tag = SLA
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			hidden_effect = {
+				if = { limit = { accepted_culture = russian } remove_accepted_culture = russian }
+				if = { limit = { accepted_culture = czech } remove_accepted_culture = czech }
+				if = { limit = { accepted_culture = polish } remove_accepted_culture = polish }
+				if = { limit = { accepted_culture = schlesian } remove_accepted_culture = schlesian }
+				if = { limit = { accepted_culture = sorbian } remove_accepted_culture = sorbian }
+				if = { limit = { accepted_culture = slovak } remove_accepted_culture = slovak }
+				if = { limit = { accepted_culture = novgorodian } remove_accepted_culture = novgorodian }
+				if = { limit = { accepted_culture = ryazanian } remove_accepted_culture = ryazanian }
+				if = { limit = { accepted_culture = byelorussian } remove_accepted_culture = byelorussian }
+				if = { limit = { accepted_culture = ruthenian } remove_accepted_culture = ruthenian }
+				if = { limit = { accepted_culture = slovene } remove_accepted_culture = slovene }
+				if = { limit = { accepted_culture = bosnian } remove_accepted_culture = bosnian }
+				if = { limit = { accepted_culture = serbian } remove_accepted_culture = serbian }
+				if = { limit = { accepted_culture = bulgarian } remove_accepted_culture = bulgarian }
+				if = { limit = { accepted_culture = croatian } remove_accepted_culture = croatian }
+				create_new_culture_group = {
+					culture_group = slavic
+					culture = russian
+					culture2 = czech
+					culture3 = polish
+					culture4 = schlesian
+					culture5 = sorbian
+					culture6 = slovak
+					culture7 = novgorodian
+					culture8 = ryazanian
+					culture9 = byelorussian
+					culture10 = ruthenian
+					culture12 = slovene
+					culture13 = bosnian
+					culture14 = serbian
+					culture15 = bulgarian
+					culture16 = croatian
+				}
+			}
+
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 100
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+	
+}
+
+	slavic_nation_republic = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = SLA }
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = SLA }
+					num_of_cities = 6
+				}
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = polish
+				primary_culture = croatian
+				primary_culture = schlesian
+				primary_culture = serbian
+				primary_culture = slovene
+				primary_culture = bosnian
+				primary_culture = bulgarian
+				primary_culture = czech
+				primary_culture = polish
+				primary_culture = schlesian
+				primary_culture = sorbian
+				primary_culture = slovak
+				primary_culture = russian
+				primary_culture = novgorodian
+				primary_culture = ryazanian
+				primary_culture = byelorussian
+				primary_culture = ruthenian
+			}
+		}
+
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no			
+			owns_core_province = 262	# Krakow
+			owns_core_province = 295	# Moskva
+			owns_core_province = 280	# Kiev
+			owns_core_province = 266	# Prague
+			owns_core_province = 4239	# Belgrade
+		}
+
+		effect = {
+			change_tag = SLA
+			on_change_tag_effect = yes
+			restore_country_name = yes
+
+			hidden_effect = {
+				if = { limit = { accepted_culture = russian } remove_accepted_culture = russian }
+				if = { limit = { accepted_culture = czech } remove_accepted_culture = czech }
+				if = { limit = { accepted_culture = polish } remove_accepted_culture = polish }
+				if = { limit = { accepted_culture = schlesian } remove_accepted_culture = schlesian }
+				if = { limit = { accepted_culture = sorbian } remove_accepted_culture = sorbian }
+				if = { limit = { accepted_culture = slovak } remove_accepted_culture = slovak }
+				if = { limit = { accepted_culture = novgorodian } remove_accepted_culture = novgorodian }
+				if = { limit = { accepted_culture = ryazanian } remove_accepted_culture = ryazanian }
+				if = { limit = { accepted_culture = byelorussian } remove_accepted_culture = byelorussian }
+				if = { limit = { accepted_culture = ruthenian } remove_accepted_culture = ruthenian }
+				if = { limit = { accepted_culture = slovene } remove_accepted_culture = slovene }
+				if = { limit = { accepted_culture = bosnian } remove_accepted_culture = bosnian }
+				if = { limit = { accepted_culture = serbian } remove_accepted_culture = serbian }
+				if = { limit = { accepted_culture = bulgarian } remove_accepted_culture = bulgarian }
+				if = { limit = { accepted_culture = croatian } remove_accepted_culture = croatian }
+				create_new_culture_group = {
+					culture_group = slavic
+					culture = russian
+					culture2 = czech
+					culture3 = polish
+					culture4 = schlesian
+					culture5 = sorbian
+					culture6 = slovak
+					culture7 = novgorodian
+					culture8 = ryazanian
+					culture9 = byelorussian
+					culture10 = ruthenian
+					culture12 = slovene
+					culture13 = bosnian
+					culture14 = serbian
+					culture15 = bulgarian
+					culture16 = croatian
+				}
+			}
+			if = {
+				limit = { is_revolutionary = no }
+				if = {
+					limit = { government = republic }
+					add_government_reform = slavia_republic_reform
+				}
+				else = {
+					if = {
+						limit = { NOT = { government = monarchy } }
+						change_government = monarchy
+					}
+					add_government_reform = slavia_monarchy_reform
+				}
+			}
+			SLA = { set_government_rank = 3 }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 100
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+	
+}

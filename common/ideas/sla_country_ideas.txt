@@ -1,0 +1,44 @@
+SLA_ideas = {
+	start = {
+		core_creation = -0.15
+		global_manpower_modifier = 0.33
+	}
+	bonus = {
+		governing_capacity_modifier = 0.2
+	}
+	trigger = {
+		tag = SLA
+	}
+	free = yes	# will be added at load.
+	SLA_russia = {
+		tolerance_own = 3
+		global_missionary_strength = 0.03
+	}
+	SLA_poland = {
+		cavalry_power = 0.3
+		can_recruit_hussars = yes
+		cavalry_cost = -0.1
+	}
+	SLA_czech = {
+		technology_cost = -0.1
+		innovativeness_gain = 0.5
+	}
+	SLA_serbia = {
+		culture_conversion_cost = -0.25
+		stability_cost_modifier = -0.10
+	}
+	SLA_ruthenia = {
+		may_establish_frontier = yes
+		auto_explore_adjacent_to_colony = yes
+		cossacks_privilege_slots = 1
+	}
+	SLA_bulgaria = {
+		autonomy_change_time = -0.10
+		discipline = 0.05
+		legitimacy = 1
+	}
+	SLA_croatia = {
+		naval_forcelimit_modifier = 0.15
+		global_tax_modifier = 0.1
+	}
+}
